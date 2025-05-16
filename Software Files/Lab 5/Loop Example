@@ -1,0 +1,43 @@
+/* 
+* Lab Names: Coleman Beggs
+* Lab #1s:
+*/
+
+/*Include files */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*Function Declarations*/
+void OutputInit(void); 
+
+int main(void)
+	{	
+		
+		/*Setup Launchpad for Printf & Scanf*/
+		OutputInit(); 
+		
+		/* Place application code here */
+		
+		int number; // Initialize user number
+		
+		printf("Enter the number 10, 20, or 30: ");
+		scanf("%d", &number);
+		
+		if ((number == 10) || (number == 20) || (number == 30))
+		{
+			// Do Stuff
+			int i, total;
+			for (i = 0; i <= number; i++)
+			{
+				total += i;
+			}	
+			printf("The sum of all numbers from 0 to %d is: %d", number, total);
+		}	
+		else 
+		{
+			printf("Error: The number entered was not 10, 20, or 30");
+		}	
+		/*Go in waiting state. Will modify in later labs*/
+		while(1);
+  }
